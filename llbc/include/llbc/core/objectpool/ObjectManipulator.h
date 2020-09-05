@@ -56,8 +56,6 @@ private:
      */
     template <typename ObjectType, void (ObjectType::*)()>
     struct clearable_type;
-    template <typename ObjectType>
-    static bool ResetObj(void *obj, clearable_type<ObjectType, &ObjectType::clear> *);
 
     /**
      * Reset object, default method.
