@@ -1,0 +1,97 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">release32</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1544EC4-AD4D-6D16-D67F-529BC2D74C22}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>csllbc_testsuite</RootNamespace>
+    <AssemblyName>csllbc_testsuite</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release32|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\release32\csllbc_testsuite\</IntermediateOutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug32|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\debug32\csllbc_testsuite\</IntermediateOutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release64|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\release64\csllbc_testsuite\</IntermediateOutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug64|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\debug64\csllbc_testsuite\</IntermediateOutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\wrap\csllbc\testsuite\ITestCase.cs">
+      <Link>wrap\csllbc\testsuite\ITestCase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\Properties\AssemblyInfo.cs">
+      <Link>wrap\csllbc\testsuite\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\TestSuite.cs">
+      <Link>wrap\csllbc\testsuite\TestSuite.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\comm\TestCase_Comm_Service.cs">
+      <Link>wrap\csllbc\testsuite\comm\TestCase_Comm_Service.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\comm\TestCase_Comm_Timer.cs">
+      <Link>wrap\csllbc\testsuite\comm\TestCase_Comm_Timer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\common\TestCase_Com_LibConfig.cs">
+      <Link>wrap\csllbc\testsuite\common\TestCase_Com_LibConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\common\TestCase_Com_SafeConsole.cs">
+      <Link>wrap\csllbc\testsuite\common\TestCase_Com_SafeConsole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\core\config\TestCase_Core_Config_Ini.cs">
+      <Link>wrap\csllbc\testsuite\core\config\TestCase_Core_Config_Ini.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\testsuite\core\log\TestCase_Core_Log_Logger.cs">
+      <Link>wrap\csllbc\testsuite\core\log\TestCase_Core_Log_Logger.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

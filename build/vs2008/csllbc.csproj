@@ -1,0 +1,164 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">release32</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58CE2BF7-4470-56CD-2D2B-6A21196CDD1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>csllbc</RootNamespace>
+    <AssemblyName>csllbc</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release32|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\release32\csllbc\</IntermediateOutputPath>
+    <DefineConstants>CSLLBC_TARGET_PLATFORM_WIN32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug32|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\debug32\csllbc\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;CSLLBC_TARGET_PLATFORM_WIN32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'release64|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\release64\csllbc\</IntermediateOutputPath>
+    <DefineConstants>CSLLBC_TARGET_PLATFORM_WIN32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'debug64|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\vs2008\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\debug64\csllbc\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;CSLLBC_TARGET_PLATFORM_WIN32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\wrap\csllbc\csharp\Properties\AssemblyInfo.cs">
+      <Link>wrap\csllbc\csharp\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\Codec.cs">
+      <Link>wrap\csllbc\csharp\comm\Codec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\IFacade.cs">
+      <Link>wrap\csllbc\csharp\comm\IFacade.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\Packet.cs">
+      <Link>wrap\csllbc\csharp\comm\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\RegHolder.cs">
+      <Link>wrap\csllbc\csharp\comm\RegHolder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\Service.cs">
+      <Link>wrap\csllbc\csharp\comm\Service.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\comm\Timer.cs">
+      <Link>wrap\csllbc\csharp\comm\Timer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\Errors.cs">
+      <Link>wrap\csllbc\csharp\common\Errors.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\Exception.cs">
+      <Link>wrap\csllbc\csharp\common\Exception.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\LibConfig.cs">
+      <Link>wrap\csllbc\csharp\common\LibConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\LibDelegates.cs">
+      <Link>wrap\csllbc\csharp\common\LibDelegates.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\LibIniter.cs">
+      <Link>wrap\csllbc\csharp\common\LibIniter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\LibUtil.cs">
+      <Link>wrap\csllbc\csharp\common\LibUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\common\SafeConsole.cs">
+      <Link>wrap\csllbc\csharp\common\SafeConsole.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\core\config\Ini.cs">
+      <Link>wrap\csllbc\csharp\core\config\Ini.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\core\log\Log.cs">
+      <Link>wrap\csllbc\csharp\core\log\Log.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\core\log\Logger.cs">
+      <Link>wrap\csllbc\csharp\core\log\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\core\log\LoggerMgr.cs">
+      <Link>wrap\csllbc\csharp\core\log\LoggerMgr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\core\util\StringUtil.cs">
+      <Link>wrap\csllbc\csharp\core\util\StringUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\LLBCNative.cs">
+      <Link>wrap\csllbc\csharp\native\LLBCNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\comm\ServiceNative.cs">
+      <Link>wrap\csllbc\csharp\native\comm\ServiceNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\comm\TimerNative.cs">
+      <Link>wrap\csllbc\csharp\native\comm\TimerNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\common\ErrnoNative.cs">
+      <Link>wrap\csllbc\csharp\native\common\ErrnoNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\common\ErrorsNative.cs">
+      <Link>wrap\csllbc\csharp\native\common\ErrorsNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\common\LibConfigNative.cs">
+      <Link>wrap\csllbc\csharp\native\common\LibConfigNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\core\config\IniNative.cs">
+      <Link>wrap\csllbc\csharp\native\core\config\IniNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\core\log\LogNative.cs">
+      <Link>wrap\csllbc\csharp\native\core\log\LogNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\core\os\OS_ConsoleNative.cs">
+      <Link>wrap\csllbc\csharp\native\core\os\OS_ConsoleNative.cs</Link>
+    </Compile>
+    <Compile Include="..\..\wrap\csllbc\csharp\native\core\utils\Util_StringNative.cs">
+      <Link>wrap\csllbc\csharp\native\core\utils\Util_StringNative.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)../../tools/py.exe -c &quot;import os;print(os.getcwd())&quot;&#x0D;&#x0A;$(ProjectDir)../../tools/py.exe ../../../wrap/csllbc/csharp/script_tools/gen_native_code.py&#x0D;&#x0A;$(ProjectDir)../../tools/py.exe ../../../wrap/csllbc/csharp/script_tools/gen_errno_code.py</PreBuildEvent>
+  </PropertyGroup>
+</Project>
